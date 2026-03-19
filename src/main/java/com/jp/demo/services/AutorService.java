@@ -2,6 +2,7 @@ package com.jp.demo.services;
 
 import com.jp.demo.models.AutorModel;
 import com.jp.demo.repositories.AutorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,9 +10,10 @@ import java.util.List;
 @Service
 public class AutorService {
 
+    @Autowired
     private AutorRepository autorRepository;
 
-    public AutorModel cadastras(AutorModel autorModel) {
+    public AutorModel cadastrar(AutorModel autorModel) {
         return autorRepository.save(autorModel);
     }
 
